@@ -1,7 +1,11 @@
-**Tugas sebelum UTS Infrastruktur dan Platform Sains Data**
-<h1>Tugas Perkuliahan Menggunakan Metaflow</h1>
+<h1>Tugas sebelum UTS Infrastruktur dan Platform Sains Data</h1>
+<h2>Tugas Perkuliahan Menggunakan Metaflow</h2>
 
-<h2>Deskripsi Proyek</h2>
+<h3>Nama : Rizky Maulana Saputra</h3>
+<h3>NIM : L200220230</h3>
+<h3>Kelas : D</h3>
+
+<h3>Deskripsi Proyek</h3>
 <p>
   Proyek ini adalah bagian dari tugas perkuliahan yang menggunakan Metaflow untuk membuat pipeline yang mengilustrasikan proses perkuliahan.
   Pipeline ini mensimulasikan tahapan mulai dari pembayaran SPP, mengikuti perkuliahan selama 14 pertemuan, mengikuti Ujian Tengah Semester, mengikuti Ujian Akhir Semester, hingga menghitung nilai akhir 
