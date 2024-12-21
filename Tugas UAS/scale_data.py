@@ -1,15 +1,32 @@
+import re
 import tarfile
-from itertools import islice
 from sklearn.feature_extraction.text import CountVectorizer
 
 
-def load_chat(num_docs):
-    loc = 'ChatGroup.tar'
-    with tarfile.open(loc) as tar :
-        datafile = tar.extractfile('ChatGroup.tar/ChatGroup.txt')
-        return list(islice(datafile, num_docs))
-def make_matrix(docs, binary=False):
-    vec = CountVectorizer(min_df=10, max_df=0.1, binary=binary)
+def clean_chat(text):
+    cleaned_text = re.sub(r"\d+", "", text) 
+    
+    cleaned_text = re.sub(r"[^a-zA-Z.,!?;:'\"()\[\]{}\-_/ ]+", " ", cleaned_text)
+    
+    cleaned_text = cleaned_text.lower()
+    
+    cleaned_text = re.sub(r"\s+", " ", cleaned_text).strip()
+    
+    return cleaned_text
+
+def load_chat (nums_docs):
+    path = "ChatGroup.tar"
+    with tarfile.open(path) as tar :
+        datafile = tar.extractfile('ChatGroup.txt')
+        content = datafile.read().decode('utf-8',errors='ignore')
+        lines = content.splitlines()[:nums_docs]
+
+        cleaned_text = [clean_chat(line) for line in lines]
+        return cleaned_text
+
+    
+def make_matrix (docs, binary=False):
+    vec = CountVectorizer(min_df=5,max_df=0.9,binary=binary)
     mtx = vec.fit_transform(docs)
     cols = [None] * len(vec.vocabulary_)
     for word, idx in vec.vocabulary_.items():
