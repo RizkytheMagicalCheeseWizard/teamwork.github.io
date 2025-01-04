@@ -8,8 +8,8 @@ class GaussianFlow(FlowSpec):
     @step
     def start(self):
         import scale_data
-        banned_words = {"rafli","rizky","gilang","pandu","joko","afrizal","farhan","chandra"}
-        docs = scale_data.load_chat(self.num_docs,banned_words=banned_words)
+        
+        docs = scale_data.load_chat(self.num_docs)
         self.mtx, self.cols = scale_data.make_matrix(docs)
         self.gmm_params = [3,4,5]
         self.next(self.train_gmm, foreach='gmm_params')

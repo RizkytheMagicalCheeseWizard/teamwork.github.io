@@ -8,6 +8,6 @@ def top_words(num_clusters, clusters, mtx, columns):
         word_freqs = mtx[rows_in_cluster].sum(axis=0).A[0]
         ordered_freqs = np.argsort(word_freqs)
         top_words = [(columns[idx], int(word_freqs[idx]))
-                     for idx in islice(reversed(ordered_freqs), 3)]
+                     for idx in islice(reversed(ordered_freqs), 20)]
         top.append(top_words)
     return top
