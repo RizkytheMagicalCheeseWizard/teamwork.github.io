@@ -1,53 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan</title>
-</head>
-<body>
-    <h1>Tugas sebelum UAS</h1>
-    <h2>Nama : Rizky Maulana Saputra</h2>
-    <h2>NIM : L200220230</h2>
-    <h2>Kelas : D</h2>
-    <ol>
-       <h3>
-        <li>
-            <div>Export Konten ChatGroup Whatsapp dan Compress menjadi .tar</div>
-            <img src="img/img1.png" alt="ChatGroup">
-        </li>
-        <li>
-            <div>Melakukan Cleaning data yang akan menghilangkan tanda baca dan angka</div>
-            <img src="img/img2.png" alt="">
-            <div>Menggunakan regex untuk menghilangkan karakter yang tidak diinginkan dan menghilangkan spasi yang berlebihan</div>
-        </li>
-        <li>
-            <div>Menggunakan kode yang ada di scale_data.py dan many_kmeans_flow.py</div>
-            <img src="img/img3.png" alt="">
-            <div>Memodifikasi scale_data.py karena untuk menyesuaikan data yang digunakan dan menambahkan fungsi clean_chat</div>
-            <img src="img/img4.png" alt="">
-            <img src="img/img5.png" alt="">
-            <div>Pada step start menambahi parameter untuk cluster yakni 3,4,5 dan mengurangi resource untuk membatasi penggunaan ram dan cpu</div>
-        </li>
-        <li>
-            <div>Menggunakan Algoritma lain yaitu Gaussian</div>
-            <img src="img/img6.png" alt="">
-            <img src="img/img7.png" alt="">
-            <div>Karena menggunakan gaussian tentu perlu import modulenya terlebih dahulu</div>
-            <div>Untuk step train_gmm Gaussian ini menggunakan n_component bukan seperti kmeans yang menggunakan n_cluster</div>
-        </li>
-        <li>
-            <div>Disini saya menampilkannya menggunakan jupyter notebook</div>
-            <div>Gambar dibawah ini menggunakan Algorithm KMeans</div>
-            <img src="img/img8.png" alt="">
-            <div>Karena terdapat media omitted yang menandakan tidak import gambar juga</div>
-            <div>Semua cluster berhubungan dengan membuat sebuah konten yang nama orang - orang tersebut terlibat dikarenakan grup itu memang digunakan terkait konten</div>
-            <div>Gambar dibawah ini menggunakan Algorithm Gaussian</div>
-            <img src="img/img9.png" alt="">
-            <div>Dari kedua Algorithm diatas memiliki hasil yang berbeda meskipun ada kata yang sama</div>
-            <div>Dikarenakan Gaussian ini memperhitungkan probabilitas serta distribusi data dibandingkan dengan Kmeans yang langsung membagi data</div>
-        </li>
-       </h3> 
-    </ol>
-</body>
-</html>
+<h1>Tugas sebelum UTS Infrastruktur dan Platform Sains Data</h1>
+<h2>Tugas Perkuliahan Menggunakan Metaflow</h2>
+
+<h3>Nama : Rizky Maulana Saputra</h3>
+<h3>NIM : L200220230</h3>
+<h3>Kelas : D</h3>
+
+<h3>Deskripsi Proyek</h3>
+<p>
+  Proyek ini adalah bagian dari tugas perkuliahan yang menggunakan Metaflow untuk membuat pipeline yang mengilustrasikan proses perkuliahan.
+  Pipeline ini mensimulasikan tahapan mulai dari pembayaran SPP, mengikuti perkuliahan selama 14 pertemuan, mengikuti Ujian Tengah Semester, mengikuti Ujian Akhir Semester, hingga menghitung nilai akhir 
+  berdasarkan kehadiran dan nilai ujian.
+</p>
+
+<h2>Alur Proses</h2>
+<p>Pipeline ini terdiri dari beberapa tahapan:</p>
+<ol>
+  <li><strong>Start</strong> - Memulai proses perkuliahan.</li>
+  <li><strong>SPP Payment</strong> - Memastikan apakah SPP sudah dibayar.</li>
+  <li><strong>Confirm Payment</strong> - Mengecek validitas pembayaran SPP.</li>
+  <li><strong>Attend Class</strong> - Melakukan simulasi kehadiran pada 14 pertemuan.</li>
+  <li><strong>Attend UTS</strong>- Mengikuti Ujian Tengah Semester</li>
+  <li><strong>Attend UAS</strong>- Mengikuti Ujian Akhir Semester</li>
+  <li><strong>Calculate Final Score</strong> - Menghitung nilai akhir berdasarkan nilai UTS, nilai UAS, dan tingkat kehadiran.</li>
+  <li><strong>End</strong> - Menyelesaikan proses.</li>
+</ol>
+
+<h1>Tugas sebelum UAS Infrastruktur dan Platform Sains Data</h1>
+<h2>Tugas Perkuliahan Analisis Konten Group Whatsapp</h2>
+<h3>Deskripsi Proyek</h3>
+<p>
+    Proyek ini bertujuan untuk menganalisis dan mengelompokkan konten percakapan dari beberapa grup WhatsApp menggunakan teknik data clustering. 
+    Tujuan akhir dari analisis ini adalah untuk menemukan pola atau topik yang sering dibahas dalam grup-grup WhatsApp dan mengelompokkan pesan-pesan yang memiliki kesamaan berdasarkan kata-kata yang digunakan.
+</p>
+<div>Alur Pengerjaan</div>
+<ol>
+    <li>
+        <div>Export Konten ChatGroup Whatsapp dan Compress menjadi .tar</div>
+        <img src="img/img1.png" alt="ChatGroup">
+    </li>
+    <li>
+        <div>Melakukan Cleaning data yang akan menghilangkan tanda baca dan angka</div>
+        <img src="img/img2.png" alt="">
+        <div>Menggunakan regex untuk menghilangkan karakter yang tidak diinginkan dan menghilangkan spasi yang berlebihan</div>
+    </li>
+    <li>
+        <div>Menggunakan kode yang ada di scale_data.py dan many_kmeans_flow.py</div>
+        <img src="img/img3.png" alt="">
+        <div>Memodifikasi scale_data.py karena untuk menyesuaikan data yang digunakan dan menambahkan fungsi clean_chat</div>
+        <img src="img/img4.png" alt="">
+        <img src="img/img5.png" alt="">
+        <div>Pada step start menambahi parameter untuk cluster yakni 3,4,5 dan mengurangi resource untuk membatasi penggunaan ram dan cpu</div>
+    </li>
+    <li>
+        <div>Menggunakan Algoritma lain yaitu Gaussian</div>
+        <img src="img/img6.png" alt="">
+        <img src="img/img7.png" alt="">
+        <div>Karena menggunakan gaussian tentu perlu import modulenya terlebih dahulu</div>
+        <div>Untuk step train_gmm Gaussian ini menggunakan n_component bukan seperti kmeans yang menggunakan n_cluster</div>
+    </li>
+    <li>
+        <div>Disini saya menampilkannya menggunakan jupyter notebook</div>            
+        <div>Gambar dibawah ini menggunakan Algorithm KMeans</div>
+        <img src="img/img8.png" alt="">
+        <div>Karena terdapat media omitted yang menandakan tidak import gambar juga</div>
+        <div>Semua cluster berhubungan dengan membuat sebuah konten yang nama orang - orang tersebut terlibat dikarenakan grup itu memang digunakan terkait konten</div>            
+        <div>Gambar dibawah ini menggunakan Algorithm Gaussian</div>
+        <img src="img/img9.png" alt="">
+        <div>Dari kedua Algorithm diatas memiliki hasil yang berbeda meskipun ada kata yang sama</div>
+        <div>Dikarenakan Gaussian ini memperhitungkan probabilitas serta distribusi data dibandingkan dengan Kmeans yang langsung membagi data</div>
+    </li>
+</ol>
