@@ -9,7 +9,6 @@ class KMeansFlow(FlowSpec):
     @step
     def start(self):
         import scale_data
-        
         docs = scale_data.load_chat(self.num_docs)
         self.mtx, self.cols = scale_data.make_matrix(docs)
         self.kmeans_params = [3,4,5]
